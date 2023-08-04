@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import './styles.scss'
 
-class Registration extends Component {
-
-    render() {
+const Registration = props => {
         return(
             <div>
                 <h1>
@@ -11,7 +9,6 @@ class Registration extends Component {
                 </h1>
             </div>
         );
-    }
 }
 
 export default Registration;
