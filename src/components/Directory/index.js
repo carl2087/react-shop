@@ -14,7 +14,7 @@ const Directory = props => {
                     }}
                 >
 
-                    <a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                         Shop Womens
                     </a>
 
@@ -26,7 +26,7 @@ const Directory = props => {
                     }}
                 >
 
-                    <a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                         Shop Mens
                     </a>
 
