@@ -1,6 +1,6 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyDet3aqrHFZkbWesXBzGKF9Zn5XamafDgM",
-    authDomain: "reactshop-baf45.firebaseapp.com",
+    apiKey: `${process.env.REACT_APP_API_KEY}`,
+    authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
     projectId: "reactshop-baf45",
     storageBucket: "reactshop-baf45.appspot.com",
     messagingSenderId: "100058784317",
