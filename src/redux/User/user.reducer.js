@@ -5,15 +5,15 @@ const INTIAL_STATE = {
 };
 
 const userReducer = (state=INTIAL_STATE, action) => {
-	switch(action.type) {
-		case userTypes.SET_CURRENT_USER:
-			return {
-				...state,
-				currentUser: action.payload
-			}
-		default:
-			return state;
-	}
+  switch (action.type) {
+    case userTypes.SET_CURRENT_USER:
+      return {
+        ...state,
+        currentUser: action.payload,
+      };
+    default:
+      return state;
+  }
 };
 
 export default userReducer;
