@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./default.scss";
 import { auth, handleUserProfile } from "./firebase/utils";
 import { setCurrentUser } from "./redux/User/user.actions";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 //hoc
 import WithAuth from "./hoc/withAuth";
@@ -17,29 +17,29 @@ import Homepage from "./pages/Homepage";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import Recovery from "./pages/Recovery";
-import Dashboard from "./pages/Dashboard"
+import Dashboard from "./pages/Dashboard";
 
 const App = (props) => {
-  const { setCurrentUser } = props;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const authListener = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await handleUserProfile(userAuth);
         userRef.onSnapshot((snapshot) => {
-          setCurrentUser({
+          dispatch(setCurrentUser({
             id: snapshot.id,
             ...snapshot.data(),
-          });
+          }))
         });
       }
-      setCurrentUser(userAuth);
-    });
+      dispatch(setCurrentUser(userAuth));
+    }, [dispatch]);
 
     return () => {
       authListener();
     };
-  }, [setCurrentUser]);
+  }, [dispatch]);
 
   return (
     <div className="App">
@@ -56,24 +56,20 @@ const App = (props) => {
         <Route
           exact
           path="/registration"
-          render={() =>
-            (
-              <MainLayout>
-                <Registration />
-              </MainLayout>
-            )
-          }
+          render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )}
         />
         <Route
           exact
           path="/login"
-          render={() =>
-            (
-              <MainLayout>
-                <Login />
-              </MainLayout>
-            )
-          }
+          render={() => (
+            <MainLayout>
+              <Login />
+            </MainLayout>
+          )}
         />
         <Route
           exact
@@ -84,7 +80,7 @@ const App = (props) => {
             </MainLayout>
           )}
         />
-                <Route
+        <Route
           exact
           path="/dashboard"
           render={() => (
@@ -100,12 +96,4 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

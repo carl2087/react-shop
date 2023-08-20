@@ -8,14 +8,13 @@ const mapState = ({ user }) => ({
 const useAuth = (props) => {
   const { currentUser } = useSelector(mapState);
 
-	useEffect(() => {
-		if (!currentUser) {
-			props.history.push('/login')
-		}
-	}, [currentUser, props.history]);
+  useEffect(() => {
+    if (!currentUser) {
+      props.history.push("/login");
+    }
+  }, [currentUser, props.history]);
 
   return currentUser;
 };
-
 
 export default useAuth;
