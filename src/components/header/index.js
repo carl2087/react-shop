@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Logo from "../../assets/react-shop-logo.png";
 import { NavLink } from "react-router-dom";
-import { auth } from "../../firebase/utils";
+import { signOutUserStart } from "../../redux/User/user.actions";
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
@@ -11,6 +11,11 @@ const mapState = ({ user }) => ({
 
 const Header = (props) => {
   const { currentUser } = useSelector(mapState);
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+    dispatch(signOutUserStart());
+  };
 
   return (
     <header className="header">
@@ -28,7 +33,7 @@ const Header = (props) => {
                 <NavLink to="/dashboard">My Account</NavLink>
               </li>
               <li>
-                <span onClick={() => auth.signOut()}>LogOut</span>
+                <span onClick={() => signOut()}>LogOut</span>
               </li>
             </ul>
           )}
