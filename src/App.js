@@ -4,6 +4,9 @@ import "./default.scss";
 import { checkUserSession } from "./redux/User/user.actions";
 import { useDispatch } from "react-redux";
 
+// componenents
+import AdminToolbar from "./components/AdminToolbar";
+
 //hoc
 import WithAuth from "./hoc/withAuth";
 
@@ -17,6 +20,8 @@ import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import Recovery from "./pages/Recovery";
 import Dashboard from "./pages/Dashboard";
+import Admin from "./pages/Admin";
+import WithAdminAuth from "./hoc/withAdminAuth";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -27,6 +32,7 @@ const App = (props) => {
 
   return (
     <div className="App">
+      <AdminToolbar />
       <Switch>
         <Route
           exact
@@ -73,6 +79,17 @@ const App = (props) => {
                 <Dashboard />
               </MainLayout>
             </WithAuth>
+          )}
+        />
+        <Route
+          exact
+          path="/admin"
+          render={() => (
+            <WithAdminAuth>
+              <MainLayout>
+                <Admin />
+              </MainLayout>
+            </WithAdminAuth>
           )}
         />
       </Switch>
