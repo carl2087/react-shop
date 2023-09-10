@@ -32,6 +32,10 @@
   table.results {
     tr {
 
+      &:nth-child(odd) {
+        background-color: #f1e8e8;
+      }
+
       &:nth-child(even) {
         background-color: #d3d3d3;
       }
@@ -59,7 +63,7 @@
 
           img {
             display: block;
-            width: 100% !important;
+            width: 70% !important;
           }
         }
       }

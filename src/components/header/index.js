@@ -26,6 +26,21 @@ const Header = (props) => {
           </NavLink>
         </div>
 
+        <nav>
+          <ul>
+            <li>
+              <NavLink to='/'>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/search'>
+                Search
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+
         <div className="callToActions">
           {currentUser && (
             <ul>

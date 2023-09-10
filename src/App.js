@@ -24,6 +24,7 @@ import Recovery from "./pages/Recovery";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
 import WithAdminAuth from "./hoc/withAdminAuth";
+import Search from "./pages/Search";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -44,6 +45,15 @@ const App = (props) => {
               <Homepage />
             </HomepageLayout>
           )}
+        />
+        <Route
+        exact
+        path='/search'
+        render={() => (
+          <MainLayout>
+            <Search />
+          </MainLayout>
+        )}
         />
         <Route
           exact

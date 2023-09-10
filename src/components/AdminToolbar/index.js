@@ -5,26 +5,24 @@ import "./styles.scss";
 import { checkUserIsAdmin } from "../../utils";
 
 const mapState = ({ user }) => ({
-	currentUser: user.currentUser
-})
+  currentUser: user.currentUser,
+});
 
 const AdminToolbar = (props) => {
-	const { currentUser } = useSelector(mapState);
+  const { currentUser } = useSelector(mapState);
 
-	const isAdmin = checkUserIsAdmin(currentUser)
-	if (!isAdmin) return null
+  const isAdmin = checkUserIsAdmin(currentUser);
+  if (!isAdmin) return null;
 
   return (
-		<div className="adminToolbar">
-			<ul>
-				<li>
-					<NavLink to='/admin'>
-						My Admin
-					</NavLink>
-				</li>
-			</ul>
-		</div>
-	);
+    <div className="adminToolbar">
+      <ul>
+        <li>
+          <NavLink to="/admin">My Admin</NavLink>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default AdminToolbar;
