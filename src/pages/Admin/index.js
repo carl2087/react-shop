@@ -6,7 +6,8 @@ import FormInput from './../../components/Forms/FormInput';
 import FormSelect from '../../components/Forms/FormSelect';
 import Button from '../../components/Forms/Button';
 import LoadMore from './../../components/LoadMore';
-import { CKEditor } from 'ckeditor4-react';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import './styles.scss'
 
 const mapState = ({ productsData }) => ({
@@ -134,7 +135,11 @@ const Admin = props => {
             />
 
             <CKEditor
-              onChange={evt => setProductDesc(evt.editor.getData())}
+              editor={ ClassicEditor }
+              onChange={ ( event, editor ) => {
+                const data = editor.getData();
+                setProductDesc(data)
+            } }
             />
 
             <br />

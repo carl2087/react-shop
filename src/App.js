@@ -25,6 +25,7 @@ import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
 import WithAdminAuth from "./hoc/withAdminAuth";
 import Search from "./pages/Search";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -61,6 +62,15 @@ const App = (props) => {
         render={() => (
           <MainLayout>
             <Search />
+          </MainLayout>
+        )}
+        />
+        <Route
+        exact
+        path='/product/:productID'
+        render={() => (
+          <MainLayout>
+            <ProductDetails />
           </MainLayout>
         )}
         />
