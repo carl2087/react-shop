@@ -4,13 +4,15 @@ import { useSelector, useDispatch } from "react-redux";
 import Logo from "../../assets/react-shop-logo.png";
 import { NavLink } from "react-router-dom";
 import { signOutUserStart } from "../../redux/User/user.actions";
+import { selectCartItemsCount } from "../../redux/Cart/cart.selectors";
 
-const mapState = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapState = (state) => ({
+  currentUser: state.user.currentUser,
+  totalNumberOfCartItems: selectCartItemsCount(state)
 });
 
 const Header = (props) => {
-  const { currentUser } = useSelector(mapState);
+  const { currentUser, totalNumberOfCartItems } = useSelector(mapState);
   const dispatch = useDispatch();
 
   const signOut = () => {
@@ -42,27 +44,36 @@ const Header = (props) => {
         </nav>
 
         <div className="callToActions">
-          {currentUser && (
-            <ul>
-              <li>
-                <NavLink to="/dashboard">My Account</NavLink>
-              </li>
-              <li>
-                <span onClick={() => signOut()}>LogOut</span>
-              </li>
-            </ul>
-          )}
+          <ul>
 
-          {!currentUser && (
-            <ul>
-              <li>
-                <NavLink to="/registration">Register</NavLink>
-              </li>
-              <li>
-                <NavLink to="/login">Login</NavLink>
-              </li>
-            </ul>
-          )}
+            <li>
+              <NavLink to='/'>
+                Your Cart ({totalNumberOfCartItems})
+              </NavLink>
+            </li>
+
+            {currentUser &&
+              <>
+                <li>
+                  <NavLink to="/dashboard">My Account</NavLink>
+                </li>
+                <li>
+                  <span onClick={() => signOut()}>LogOut</span>
+                </li>
+              </>
+            }
+
+            {!currentUser && 
+                <>
+                  <li>
+                    <NavLink to="/registration">Register</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/login">Login</NavLink>
+                  </li>
+                </>
+            }
+          </ul>
         </div>
       </div>
     </header>
