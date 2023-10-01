@@ -26,6 +26,7 @@ import Admin from "./pages/Admin";
 import WithAdminAuth from "./hoc/withAdminAuth";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -71,6 +72,15 @@ const App = (props) => {
         render={() => (
           <MainLayout>
             <ProductDetails />
+          </MainLayout>
+        )}
+        />
+        <Route
+        exact
+        path='/cart'
+        render={() => (
+          <MainLayout>
+            <Cart />
           </MainLayout>
         )}
         />

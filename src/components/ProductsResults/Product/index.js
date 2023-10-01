@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "../../Forms/Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addProduct } from '../../../redux/Cart/cart.actions'
 
 const Product = (product) => {
 
   const dispatch = useDispatch();
+
+  const history = useHistory();
 
   const {
     documentID,
@@ -26,7 +28,8 @@ const Product = (product) => {
     if (!product) return;
     dispatch (
       addProduct(product)
-    )
+    );
+    history.push('/cart');
   }
 
   return (

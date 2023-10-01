@@ -47,7 +47,7 @@ const Header = (props) => {
           <ul>
 
             <li>
-              <NavLink to='/'>
+              <NavLink to='/cart'>
                 Your Cart ({totalNumberOfCartItems})
               </NavLink>
             </li>
