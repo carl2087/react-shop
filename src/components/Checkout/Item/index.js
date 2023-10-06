@@ -49,7 +49,7 @@ const Item = (product) => {
 						className="cartBtn"
 						onClick={() => {handleReduceItem(product)}}
 						>
-							{'<'}
+							{' < '}
 						</span>
 						<span>
 							{quantity}
@@ -58,7 +58,7 @@ const Item = (product) => {
 						className="cartBtn"
 						onClick={() => {handleAddProduct(product)}}
 						>
-							{'>'}
+							{' > '}
 						</span>
 					</td>
 					<td>
