@@ -27,6 +27,7 @@ import WithAdminAuth from "./hoc/withAdminAuth";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -82,6 +83,17 @@ const App = (props) => {
           <MainLayout>
             <Cart />
           </MainLayout>
+        )}
+        />
+        <Route
+        exact
+        path='/payment'
+        render={() => (
+          <WithAuth>
+            <MainLayout>
+              <Payment />
+            </MainLayout>
+          </WithAuth>
         )}
         />
         <Route
