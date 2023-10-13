@@ -1,1 +1,1 @@
-export const hideStripe = 'thisisheddien'
+export const hideStripe = 'thisHasNotBEnnhidden'
