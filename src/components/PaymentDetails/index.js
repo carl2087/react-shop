@@ -4,10 +4,10 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import Button from '../Forms/Button';
 import { CountryDropdown } from "react-country-region-selector";
 import { apiInstance } from "../../utils";
-import { selectCartTotal, selectCartItemsCount } from '../../redux/Cart/cart.selectors';
-import { clearCart } from '../../redux/Cart/cart.actions'
+import { selectCartTotal, selectCartItemsCount, selectCartItems } from '../../redux/Cart/cart.selectors';
 import { createStructuredSelector } from "reselect";
 import { useSelector, useDispatch } from "react-redux";
+import { saveOrderHistory } from "../../redux/Orders/orders.actions";
 import './styles.scss';
 import { useHistory } from "react-router-dom";
 
@@ -23,13 +23,14 @@ const initialAddressState = {
 const mapState = createStructuredSelector({
 	total: selectCartTotal,
 	itemCount: selectCartItemsCount,
+	cartItems: selectCartItems,
 });
 
 const PaymentDetails = () => {
 
 	const stripe = useStripe();
 	const elements = useElements();
-	const { total, itemCount } = useSelector(mapState);
+	const { total, itemCount, cartItems } = useSelector(mapState);
 	const dispatch = useDispatch();
 	const [billingAddress, setBillingAddress] = useState({...initialAddressState});
 	const [shippingAddress, setShippingAddress] = useState({...initialAddressState});
@@ -39,7 +40,7 @@ const PaymentDetails = () => {
 
 	useEffect(() => {
 		if (itemCount < 1) {
-			history.push('/');
+			history.push('/dashboard');
 		}
 	}, [itemCount, history])
 
@@ -97,10 +98,27 @@ const PaymentDetails = () => {
 					payment_method: paymentMethod.id
 				})
 				.then(({ paymentIntent }) => {
-					dispatch(
-						clearCart()
-					)
-				})
+
+					const configOrder = {
+						orderTotal: total,
+						orderItems: cartItems.map(item => {
+							const { documentID, productThumbnail, productName,
+							productPrice, quantity } = item;
+							return {
+								documentID,
+								productThumbnail,
+								productName,
+								productPrice,
+								quantity
+							};
+						})
+					}
+
+					dispatch (
+						saveOrderHistory(configOrder)
+					);
+
+				});
 			})
 		});
 
