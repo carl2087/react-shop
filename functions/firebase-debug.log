@@ -3019,3 +3019,208 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2023-10-08T18:03:48.066Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
 [debug] [2023-10-08T18:03:48.066Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
 [debug] [2023-10-08T18:05:08.652Z] File C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-10-08T18:05:09.662Z] Validating nodejs source
+[debug] [2023-10-08T18:05:12.675Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.1",
+    "stripe": "^13.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-10-08T18:05:12.675Z] Building nodejs source
+[debug] [2023-10-08T18:05:12.675Z] Failed to find version of module node: reached end of search path C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2023-10-08T18:05:12.677Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-08T18:05:12.683Z] Found firebase-functions binary at 'C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8421
+
+[debug] [2023-10-08T18:05:13.998Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-08T18:05:19.030Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-10-08T18:05:19.030Z] [worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: FINISHING"}}
+[debug] [2023-10-08T18:05:19.040Z] [worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: exited"}}
+[debug] [2023-10-08T18:05:19.040Z] [worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-0dfed2b6-e588-430f-8eda-547dafd49357]: FINISHED"}}
+[debug] [2023-10-08T19:00:47.856Z] Received signal SIGHUP 1
+[debug] [2023-10-13T14:17:59.114Z] ----------------------------------------------------------------------
+[debug] [2023-10-13T14:17:59.117Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Ellis\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2023-10-13T14:17:59.117Z] CLI Version:   12.6.2
+[debug] [2023-10-13T14:17:59.117Z] Platform:      win32
+[debug] [2023-10-13T14:17:59.117Z] Node Version:  v20.7.0
+[debug] [2023-10-13T14:17:59.117Z] Time:          Fri Oct 13 2023 15:17:59 GMT+0100 (British Summer Time)
+[debug] [2023-10-13T14:17:59.117Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-13T14:17:59.121Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-10-13T14:17:59.218Z] Field ".functions" in "firebase.json" is possibly invalid: should be object
+[debug] [2023-10-13T14:17:59.218Z] Object ".functions[0]" in "firebase.json" has unknown property: {"additionalProperty":"redeploy"}
+[debug] [2023-10-13T14:17:59.219Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-10-13T14:17:59.224Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-13T14:17:59.224Z] > authorizing via signed-in user (c4rl3ll15@googlemail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-10-13T14:17:59.232Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-13T14:17:59.232Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-10-13T14:17:59.241Z] [hub] writing locator at C:\Users\CARLEL~1\AppData\Local\Temp\hub-reactshop-baf45.json
+[debug] [2023-10-13T14:17:59.253Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-13T14:17:59.254Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-13T14:17:59.254Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-10-13T14:17:59.257Z] defaultcredentials: writing to file C:\Users\Carl Ellis\AppData\Roaming\firebase\c4rl3ll15_googlemail_com_application_default_credentials.json
+[debug] [2023-10-13T14:17:59.268Z] Setting GAC to C:\Users\Carl Ellis\AppData\Roaming\firebase\c4rl3ll15_googlemail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Carl Ellis\\AppData\\Roaming\\firebase\\c4rl3ll15_googlemail_com_application_default_credentials.json"}}
+[debug] [2023-10-13T14:17:59.269Z] > refreshing access token with scopes: []
+[debug] [2023-10-13T14:17:59.269Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-10-13T14:17:59.269Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-13T14:17:59.423Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-10-13T14:17:59.423Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-13T14:17:59.431Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactshop-baf45/adminSdkConfig [none]
+[debug] [2023-10-13T14:17:59.517Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-10-13T14:17:59.517Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-10-13T14:17:59.837Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactshop-baf45/adminSdkConfig 200
+[debug] [2023-10-13T14:17:59.837Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactshop-baf45/adminSdkConfig {"projectId":"reactshop-baf45","storageBucket":"reactshop-baf45.appspot.com"}
+[debug] [2023-10-13T14:17:59.849Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-10-13T14:17:59.849Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-10-13T14:17:59.850Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Carl Ellis\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Carl Ellis\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-10-13T14:17:59.959Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-10-13T14:17:59.959Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\" for Cloud Functions..."}}
+[debug] [2023-10-13T14:18:00.131Z] Validating nodejs source
+[debug] [2023-10-13T14:18:01.447Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.1",
+    "stripe": "^13.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-10-13T14:18:01.447Z] Building nodejs source
+[debug] [2023-10-13T14:18:01.448Z] Failed to find version of module node: reached end of search path C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2023-10-13T14:18:01.449Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-13T14:18:01.456Z] Found firebase-functions binary at 'C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8474
+
+[debug] [2023-10-13T14:18:02.206Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/reactshop-baf45/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/reactshop-baf45/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-10-13T14:18:12.150Z] [work-queue] {"queuedWork":["/reactshop-baf45/us-central1/api-2023-10-13T14:18:12.149Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-13T14:18:12.150Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/reactshop-baf45/us-central1/api-2023-10-13T14:18:12.149Z"],"workRunningCount":1}
+[debug] [2023-10-13T14:18:12.150Z] Accepted request GET /reactshop-baf45/us-central1/api --> us-central1-api
+[debug] [2023-10-13T14:18:12.151Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-13T14:18:12.152Z] [functions] Got req.url=/reactshop-baf45/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/reactshop-baf45/us-central1/api, mapping to path=/"}}
+[debug] [2023-10-13T14:18:12.163Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-10-13T14:18:12.164Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-10-13T14:18:13.245Z] [runtime-status] [23700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.245Z] [runtime-status] [23700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.246Z] [runtime-status] [23700] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-10-13T14:18:13.246Z] [runtime-status] [23700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.475Z] [runtime-status] [23700] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-10-13T14:18:13.476Z] [runtime-status] [23700] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-10-13T14:18:13.476Z] [runtime-status] [23700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.477Z] [runtime-status] [23700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.481Z] [runtime-status] [23700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-10-13T14:18:13.481Z] [runtime-status] [23700] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-10-13T14:18:13.663Z] [runtime-status] [23700] Functions runtime initialized. {"cwd":"C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions","node_version":"20.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Carl Ellis\\\\Desktop\\\\react-shop\\\\react-shop-1\\\\functions\",\"node_version\":\"20.7.0\"}"}}
+[debug] [2023-10-13T14:18:13.663Z] [runtime-status] [23700] Listening to port: \\?\pipe\fire_emu_407d316d044daea1 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [23700] Listening to port: \\\\?\\pipe\\fire_emu_407d316d044daea1"}}
+[debug] [2023-10-13T14:18:13.695Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE"}}
+[debug] [2023-10-13T14:18:13.695Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-13T14:18:13.696Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY"}}
+[debug] [2023-10-13T14:18:13.701Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.1807ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.1807ms"}}
+[debug] [2023-10-13T14:18:13.702Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE"}}
+[debug] [2023-10-13T14:18:13.702Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-13T14:18:13.702Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-13T14:18:13.702Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-13T14:18:13.932Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-10-13T14:19:10.032Z] [work-queue] {"queuedWork":["/reactshop-baf45/us-central1/api/payments/create-2023-10-13T14:19:10.032Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-13T14:19:10.032Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/reactshop-baf45/us-central1/api/payments/create-2023-10-13T14:19:10.032Z"],"workRunningCount":1}
+[debug] [2023-10-13T14:19:10.032Z] Accepted request OPTIONS /reactshop-baf45/us-central1/api/payments/create --> us-central1-api
+[debug] [2023-10-13T14:19:10.034Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-13T14:19:10.034Z] [functions] Got req.url=/reactshop-baf45/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/reactshop-baf45/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2023-10-13T14:19:10.034Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-13T14:19:10.034Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY"}}
+[debug] [2023-10-13T14:19:10.037Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2.4656ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2.4656ms"}}
+[debug] [2023-10-13T14:19:10.037Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE"}}
+[debug] [2023-10-13T14:19:10.037Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-13T14:19:10.038Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-13T14:19:10.038Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-13T14:19:10.038Z] [work-queue] {"queuedWork":["/reactshop-baf45/us-central1/api/payments/create-2023-10-13T14:19:10.038Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-13T14:19:10.039Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/reactshop-baf45/us-central1/api/payments/create-2023-10-13T14:19:10.038Z"],"workRunningCount":1}
+[debug] [2023-10-13T14:19:10.039Z] Accepted request POST /reactshop-baf45/us-central1/api/payments/create --> us-central1-api
+[debug] [2023-10-13T14:19:10.040Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-13T14:19:10.040Z] [functions] Got req.url=/reactshop-baf45/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/reactshop-baf45/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2023-10-13T14:19:10.040Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-13T14:19:10.041Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: BUSY"}}
+[debug] [2023-10-13T14:19:10.653Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 612.5181ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 612.5181ms"}}
+[debug] [2023-10-13T14:19:10.654Z] [worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-24f337ae-8bf1-4afe-9254-cb10b2351273]: IDLE"}}
+[debug] [2023-10-13T14:19:10.654Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-13T14:19:10.654Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-13T14:19:10.654Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
