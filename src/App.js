@@ -28,6 +28,7 @@ import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
+import Order from "./pages/Order";
 
 const App = (props) => {
   const dispatch = useDispatch();
@@ -133,6 +134,17 @@ const App = (props) => {
               </DashBoardLayout>
             </WithAuth>
           )}
+        />
+        <Route
+        exact
+        path='/order/:orderID'
+        render={() => (
+          <WithAuth>
+            <DashBoardLayout>
+              <Order />
+            </DashBoardLayout>
+          </WithAuth>
+        )}
         />
         <Route
           exact

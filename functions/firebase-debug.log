@@ -3703,3 +3703,91 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2023-10-15T14:28:33.980Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
 [debug] [2023-10-15T14:28:33.980Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
 [debug] [2023-10-15T16:35:39.025Z] File C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-10-15T16:35:40.033Z] Validating nodejs source
+[debug] [2023-10-15T16:35:41.616Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.1",
+    "stripe": "^13.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-10-15T16:35:41.616Z] Building nodejs source
+[debug] [2023-10-15T16:35:41.616Z] Failed to find version of module node: reached end of search path C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2023-10-15T16:35:41.617Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-15T16:35:41.623Z] Found firebase-functions binary at 'C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8561
+
+[debug] [2023-10-15T16:35:42.194Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-15T16:35:47.224Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-10-15T16:35:47.224Z] [worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: FINISHING"}}
+[debug] [2023-10-15T16:35:47.232Z] [worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: exited"}}
+[debug] [2023-10-15T16:35:47.232Z] [worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-957eb2ea-6b9e-4a7c-a82d-752ef4100daf]: FINISHED"}}
+[debug] [2023-10-15T16:36:22.512Z] File C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-10-15T16:36:23.526Z] Validating nodejs source
+[debug] [2023-10-15T16:36:24.867Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.1",
+    "stripe": "^13.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-10-15T16:36:24.867Z] Building nodejs source
+[debug] [2023-10-15T16:36:24.868Z] Failed to find version of module node: reached end of search path C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2023-10-15T16:36:24.869Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-15T16:36:24.876Z] Found firebase-functions binary at 'C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8451
+
+[debug] [2023-10-15T16:36:25.414Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-15T17:40:57.880Z] File C:\Users\Carl Ellis\Desktop\react-shop\react-shop-1\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Carl Ellis\\Desktop\\react-shop\\react-shop-1\\functions\\index.js changed, reloading triggers"}}
