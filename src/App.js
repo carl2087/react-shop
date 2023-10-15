@@ -14,7 +14,7 @@ import WithAuth from "./hoc/withAuth";
 import MainLayout from "./layouts/MainLayout";
 import HomepageLayout from "./layouts/HomePageLayout";
 import AdminLayout from "./layouts/AdminLayout";
-// import DashBoardLayout from "./layouts/DashboardLayout";
+import DashBoardLayout from "./layouts/DashboardLayout";
 
 // pages
 import Homepage from "./pages/Homepage";
@@ -128,9 +128,9 @@ const App = (props) => {
           path="/dashboard"
           render={() => (
             <WithAuth>
-              <MainLayout>
+              <DashBoardLayout>
                 <Dashboard />
-              </MainLayout>
+              </DashBoardLayout>
             </WithAuth>
           )}
         />
