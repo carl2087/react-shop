@@ -14,7 +14,7 @@ const Directory = (props) => {
             backgroundImage: `url(${ShopWomen})`,
           }}
         >
-          <NavLink to='/search/womens'>
+          <NavLink to='/search/womens' className='homePageLinks'>
             Shop Womens
           </NavLink>
         </div>
@@ -24,7 +24,7 @@ const Directory = (props) => {
             backgroundImage: `url(${ShopMen})`,
           }}
         >
-          <NavLink to='/search/mens'>
+          <NavLink to='/search/mens' className='homePageLinks'>
             Shop Mens
           </NavLink>
         </div>
