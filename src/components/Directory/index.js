@@ -2,6 +2,7 @@ import React from "react";
 import ShopMen from "../../assets/serious-handsome-young-man-sitting-isolated.jpg";
 import ShopWomen from "../../assets/woman-with-shopping-bags-studio-yellow-background-isolated.jpg";
 import "./styles.scss";
+import { NavLink } from "react-router-dom";
 
 const Directory = (props) => {
   return (
@@ -13,9 +14,9 @@ const Directory = (props) => {
             backgroundImage: `url(${ShopWomen})`,
           }}
         >
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <NavLink to='/search/womens'>
             Shop Womens
-          </a>
+          </NavLink>
         </div>
         <div
           className="item"
@@ -23,9 +24,9 @@ const Directory = (props) => {
             backgroundImage: `url(${ShopMen})`,
           }}
         >
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <NavLink to='/search/mens'>
             Shop Mens
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
