@@ -12,5 +12,5 @@ export const checkUserIsAdmin = (currentUser) => {
 // in production
 
 export const apiInstance = axios.create({
-  baseURL: 'http://127.0.0.1:5001/reactshop-baf45/us-central1/api'
+  baseURL: 'https://us-central1-reactshop-baf45.cloudfunctions.net/api'
 });
